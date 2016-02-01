@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppVeyorServices", "AppVeyorServices\AppVeyorServices.csproj", "{83C69240-AD8D-44E1-BC95-EF529D4E751C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppVeyorServices.IntegrationTests", "AppVeyorServices.IntegrationTests\AppVeyorServices.IntegrationTests.csproj", "{9FBF4979-790C-4FD3-9C35-806F8DB89DD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{83C69240-AD8D-44E1-BC95-EF529D4E751C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C69240-AD8D-44E1-BC95-EF529D4E751C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83C69240-AD8D-44E1-BC95-EF529D4E751C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FBF4979-790C-4FD3-9C35-806F8DB89DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FBF4979-790C-4FD3-9C35-806F8DB89DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FBF4979-790C-4FD3-9C35-806F8DB89DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FBF4979-790C-4FD3-9C35-806F8DB89DD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
