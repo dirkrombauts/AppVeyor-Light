@@ -7,13 +7,13 @@ namespace AppVeyorServices
 {
     public class AppVeyorGateway
     {
-        private readonly string apiToken = 
-            ;
+        private readonly string apiToken;
 
         private readonly RestClient client;
 
-        public AppVeyorGateway()
+        public AppVeyorGateway(string apiToken)
         {
+            this.apiToken = apiToken;
             this.client = new RestClient(new Uri("https://ci.appveyor.com/api"));
         }
 
