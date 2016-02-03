@@ -16,7 +16,8 @@ namespace AppVeyorServices.IntegrationTests
         [Test]
         public void GetProjects_Always_ReturnsListOfProjects()
         {
-            var gateway = new AppVeyorGateway();
+            var apiToken = System.Configuration.ConfigurationManager.AppSettings["ApiKey"];
+            var gateway = new AppVeyorGateway(apiToken);
 
             var projects = gateway.GetProjects();
 
