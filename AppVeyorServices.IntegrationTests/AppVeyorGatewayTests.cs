@@ -27,6 +27,7 @@ namespace AppVeyorServices.IntegrationTests
 
             Check.That(project.Name).IsNotNull();
             Check.That(project.Slug).IsNotNull();
+            Check.That(project.AccountName).IsNotNull();
         }
     }
 }
