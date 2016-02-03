@@ -22,6 +22,11 @@ namespace AppVeyorServices.IntegrationTests
             var projects = gateway.GetProjects();
 
             Check.That(projects).IsNotNull();
+
+            var project = projects[0];
+
+            Check.That(project.Name).IsNotNull();
+            Check.That(project.Slug).IsNotNull();
         }
     }
 }
