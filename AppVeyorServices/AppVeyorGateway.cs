@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using RestSharp;
 
-namespace AppVeyorServices
+namespace AppVeyorLight.AppVeyorServices
 {
     public class AppVeyorGateway
     {
@@ -22,7 +22,7 @@ namespace AppVeyorServices
             var request = new RestRequest("projects", Method.GET);
 
             request.AddHeader("Accept", "application/json");
-            request.AddHeader("Authorization", string.Format("Bearer {0}", apiToken));
+            request.AddHeader("Authorization", string.Format("Bearer {0}", this.apiToken));
 
             IRestResponse<List<Project>> response = this.client.Execute<List<Project>>(request);
 

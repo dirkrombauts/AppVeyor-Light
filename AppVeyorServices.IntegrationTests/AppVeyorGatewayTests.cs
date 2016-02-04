@@ -8,7 +8,7 @@ using NFluent;
 
 using NUnit.Framework;
 
-namespace AppVeyorServices.IntegrationTests
+namespace AppVeyorLight.AppVeyorServices.IntegrationTests
 {
     [TestFixture]
     public class AppVeyorGatewayTests

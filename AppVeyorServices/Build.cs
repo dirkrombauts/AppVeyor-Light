@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AppVeyorServices
+namespace AppVeyorLight.AppVeyorServices
 {
     public class Build
     {

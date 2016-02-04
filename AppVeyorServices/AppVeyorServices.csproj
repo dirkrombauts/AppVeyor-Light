@@ -7,8 +7,8 @@
     <ProjectGuid>{83C69240-AD8D-44E1-BC95-EF529D4E751C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AppVeyorServices</RootNamespace>
-    <AssemblyName>AppVeyorServices</AssemblyName>
+    <RootNamespace>AppVeyorLight.AppVeyorServices</RootNamespace>
+    <AssemblyName>AppVeyorLight.AppVeyorServices</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
