@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AppVeyorServices
 {
@@ -9,5 +10,7 @@ namespace AppVeyorServices
         public string Slug { get; set; }
 
         public string AccountName { get; set; }
-    }
+
+       public List<Build> Builds { get; set; }
+   }
 }
