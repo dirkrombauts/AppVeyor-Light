@@ -52,19 +52,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorsOfBuildStates.feature.cs">
+    <Compile Include="ColorsOfSingleBuildStates.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ColorsOfBuildStates.feature</DependentUpon>
+      <DependentUpon>ColorsOfSingleBuildStates.feature</DependentUpon>
     </Compile>
     <Compile Include="ColorsOfBuildStatesSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ColorsOfBuildStates.feature">
+    <None Include="ColorsOfSingleBuildStates.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>ColorsOfBuildStates.feature.cs</LastGenOutput>
+      <LastGenOutput>ColorsOfSingleBuildStates.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

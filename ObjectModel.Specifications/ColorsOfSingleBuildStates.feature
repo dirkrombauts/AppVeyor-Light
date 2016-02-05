@@ -1,4 +1,4 @@
-﻿Feature: Colors Of Build States
+﻿Feature: Colors Of Single Build States
 
 Scenario Outline: The colors that correspond to single build states
 
