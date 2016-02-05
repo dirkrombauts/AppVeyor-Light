@@ -52,11 +52,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorsOfBuildStates.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorsOfBuildStates.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ColorsOfBuildStatesSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ColorsOfBuildStates.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ColorsOfBuildStates.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectModel\ObjectModel.csproj">
+      <Project>{15706BDF-B87B-40C4-88E0-936317807419}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
