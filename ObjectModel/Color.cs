@@ -8,10 +8,11 @@ namespace AppVeyorLight.ObjectModel
 {
     public enum Color
     {
-        Green,
-        Yellow,
-        Red,
-        Blue,
-        White
+        None = 0,
+        Yellow = 1,
+        Red = 3,
+        Blue = 2,
+        White = 4,
+        Green = 5,
     }
 }

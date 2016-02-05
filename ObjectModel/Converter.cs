@@ -41,27 +41,13 @@ namespace AppVeyorLight.ObjectModel
 
         public Color ConvertBuildResultsToColor(IList<BuildResult> buildResults)
         {
-            if (buildResults.Any(br => br == BuildResult.Running))
-            {
-                return Color.Yellow;
-            }
+            var color = buildResults.Select(this.ConvertBuildResultToColor)
+                .Select(c => new { Color = c, Value = (int)c })
+                .OrderBy(cv => cv.Value)
+                .Select(cv => cv.Color)
+                .FirstOrDefault();
 
-            if (buildResults.Any(br => br == BuildResult.Queued))
-            {
-                return Color.Blue;                
-            }
-
-            if (buildResults.Any(br => br == BuildResult.Failed))
-            {
-                return Color.Red;
-            }
-
-            if (buildResults.Any(br => br == BuildResult.Unknown || br == BuildResult.Cancelled))
-            {
-                return Color.White;
-            }
-
-            return Color.Green;
+            return color;
         }
     }
 }
