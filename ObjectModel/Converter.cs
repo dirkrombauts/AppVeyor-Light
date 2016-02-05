@@ -46,7 +46,22 @@ namespace AppVeyorLight.ObjectModel
                 return Color.Yellow;
             }
 
-            return Color.White;
+            if (buildResults.Any(br => br == BuildResult.Queued))
+            {
+                return Color.Blue;                
+            }
+
+            if (buildResults.Any(br => br == BuildResult.Failed))
+            {
+                return Color.Red;
+            }
+
+            if (buildResults.Any(br => br == BuildResult.Unknown || br == BuildResult.Cancelled))
+            {
+                return Color.White;
+            }
+
+            return Color.Green;
         }
     }
 }
