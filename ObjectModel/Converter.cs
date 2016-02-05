@@ -6,7 +6,13 @@ namespace AppVeyorLight.ObjectModel
     {
         public Color ConvertBuildResultToColor(BuildResult buildResult)
         {
-            throw new NotImplementedException();
+            switch (buildResult)
+            {
+                default:
+                    {
+                        return Color.Green;
+                    }
+            }
         }
     }
 }
