@@ -66,6 +66,11 @@ namespace AppVeyorLight.ObjectModel.Specifications
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The colors that correspond to single build states")]
         [NUnit.Framework.TestCaseAttribute("Success", "Green", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Running", "Yellow", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Queued", "Blue", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Failed", "Red", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Cancelled", "White", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Unknown", "White", new string[0])]
         public virtual void TheColorsThatCorrespondToSingleBuildStates(string state, string color, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The colors that correspond to single build states", exampleTags);

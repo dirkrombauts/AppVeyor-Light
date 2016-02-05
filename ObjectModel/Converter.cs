@@ -8,9 +8,31 @@ namespace AppVeyorLight.ObjectModel
         {
             switch (buildResult)
             {
-                default:
+                case BuildResult.Running:
+                    {
+                        return Color.Yellow;
+                    }
+
+                case BuildResult.Success:
                     {
                         return Color.Green;
+                    }
+
+                case BuildResult.Queued:
+                    {
+                        return Color.Blue;
+                    }
+
+                case BuildResult.Failed:
+                    {
+                        return Color.Red;
+                    }
+
+                case BuildResult.Cancelled:
+                case BuildResult.Unknown:
+                default:
+                    {
+                        return Color.White;
                     }
             }
         }

@@ -8,6 +8,10 @@ Scenario Outline: The colors that correspond to single build states
 
     Examples:
         
-        | state   | color |
-        | Success | Green |
-
+        | state     | color  |
+        | Success   | Green  |
+        | Running   | Yellow |
+        | Queued    | Blue   |
+        | Failed    | Red    |
+        | Cancelled | White  |
+        | Unknown   | White  |
