@@ -52,6 +52,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorsOfMultipleBuildStates.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorsOfMultipleBuildStates.feature</DependentUpon>
+    </Compile>
     <Compile Include="ColorsOfSingleBuildStates.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,6 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ColorsOfMultipleBuildStates.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ColorsOfMultipleBuildStates.feature.cs</LastGenOutput>
+    </None>
     <None Include="ColorsOfSingleBuildStates.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ColorsOfSingleBuildStates.feature.cs</LastGenOutput>

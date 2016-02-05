@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AppVeyorLight.ObjectModel
 {
@@ -35,6 +37,16 @@ namespace AppVeyorLight.ObjectModel
                         return Color.White;
                     }
             }
+        }
+
+        public Color ConvertBuildResultsToColor(IList<BuildResult> buildResults)
+        {
+            if (buildResults.Any(br => br == BuildResult.Running))
+            {
+                return Color.Yellow;
+            }
+
+            return Color.White;
         }
     }
 }

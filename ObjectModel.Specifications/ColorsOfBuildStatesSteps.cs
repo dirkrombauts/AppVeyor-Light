@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Linq;
 
 using NFluent;
 
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace AppVeyorLight.ObjectModel.Specifications
 {
@@ -13,6 +16,8 @@ namespace AppVeyorLight.ObjectModel.Specifications
         private readonly Converter converter;
 
         private BuildResult buildState;
+
+        private readonly List<BuildResult> buildStates = new List<BuildResult>();
 
         private Color actualColor;
 
@@ -27,10 +32,25 @@ namespace AppVeyorLight.ObjectModel.Specifications
             this.buildState = (BuildResult)Enum.Parse(typeof(BuildResult), buildState);
         }
 
+        [Given(@"I have these projects and build states")]
+        public void GivenIHaveTheseProjectsAndBuildStates(Table table)
+        {
+            var projectsAndBuildStates = table.CreateSet<ProjectsAndBuildStates>();
+
+            this.buildStates.AddRange(projectsAndBuildStates.Select(pabs => pabs.BuildState));
+        }
+
         [When(@"I turn on the light")]
         public void WhenITurnOnTheLight()
         {
-            this.actualColor = this.converter.ConvertBuildResultToColor(this.buildState);
+            if (this.buildStates.Any())
+            {
+                this.actualColor = this.converter.ConvertBuildResultsToColor(this.buildStates);
+            }
+            else
+            {
+                this.actualColor = this.converter.ConvertBuildResultToColor(this.buildState);
+            }
         }
 
         [Then(@"the light is '(.*)'")]
@@ -40,5 +60,12 @@ namespace AppVeyorLight.ObjectModel.Specifications
 
             Check.That(this.actualColor).IsEqualTo(expectedColor);
         }
+    }
+
+    public class ProjectsAndBuildStates
+    {
+        public BuildResult BuildState { get; set; }
+
+        public string Project { get; set; }
     }
 }
