@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusylightServices", "Busyli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusylightServices.UnitTests", "BusylightServices.UnitTests\BusylightServices.UnitTests.csproj", "{7EABC20B-9685-4DB3-946F-9D46253ABE57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectModel.Specifications", "ObjectModel.Specifications\ObjectModel.Specifications.csproj", "{048549EF-8A37-4310-83A0-98CCC1EF471D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7EABC20B-9685-4DB3-946F-9D46253ABE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EABC20B-9685-4DB3-946F-9D46253ABE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EABC20B-9685-4DB3-946F-9D46253ABE57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048549EF-8A37-4310-83A0-98CCC1EF471D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048549EF-8A37-4310-83A0-98CCC1EF471D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048549EF-8A37-4310-83A0-98CCC1EF471D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048549EF-8A37-4310-83A0-98CCC1EF471D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
