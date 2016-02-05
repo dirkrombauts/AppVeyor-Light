@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BuildResult.cs" />
     <Compile Include="Color.cs" />
+    <Compile Include="Converter.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,9 +10,16 @@ namespace AppVeyorLight.ObjectModel.Specifications
     [Binding]
     public class ColorsOfBuildStatesSteps
     {
+        private readonly Converter converter;
+
         private BuildResult buildState;
 
         private Color actualColor;
+
+        public ColorsOfBuildStatesSteps(Converter converter)
+        {
+            this.converter = converter;
+        }
 
         [Given(@"the build state is '(.*)'")]
         public void GivenTheBuildStateIs(string buildState)
@@ -23,7 +30,7 @@ namespace AppVeyorLight.ObjectModel.Specifications
         [When(@"I turn on the light")]
         public void WhenITurnOnTheLight()
         {
-            this.actualColor = (Color)this.buildState;
+            this.actualColor = this.converter.ConvertBuildResultToColor(this.buildState);
         }
 
         [Then(@"the light is '(.*)'")]
